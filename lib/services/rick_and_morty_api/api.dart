@@ -1,6 +1,6 @@
 import 'package:retrofit/retrofit.dart';
 import 'package:test_rick/models/character_response/character_response.dart';
-import 'package:dio/dio.dart'd;
+import 'package:dio/dio.dart';
 part 'api.g.dart';
 
 @RestApi(baseUrl: '')
