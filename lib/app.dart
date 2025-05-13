@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:test_rick/config/router.dart';
+import 'package:test_rick/config/theme.dart';
+
+
 class RickAndMortyApp extends StatelessWidget {
   const RickAndMortyApp({super.key});
 
@@ -7,8 +11,7 @@ class RickAndMortyApp extends StatelessWidget {
     return MaterialApp.router(
       title: "Rick and Morty",
       theme: theme,
-      routerConfig: ,
-
+      routerConfig: AppRouterHelper.router,
     );
   }
 }
