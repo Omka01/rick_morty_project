@@ -5,9 +5,11 @@ part "character.g.dart";
 enum CharacterStatus {
   @JsonValue('Alive')
   alive,
+
   @JsonValue('Dead')
   dead,
-  @JsonValue('Unknown')
+
+  @JsonValue('unknown')
   unknown,
 }
 
@@ -18,7 +20,7 @@ enum CharacterGender {
   female,
   @JsonValue("Genderless")
   genderless,
-  @JsonValue('Unknown')
+  @JsonValue('unknown')
   unknown,
 }
 
@@ -35,7 +37,6 @@ class Character {
   final int id;
   final String name;
   final CharacterStatus status;
-
   @CharacterSpeciesConverter()
   final CharacterSpecies species;
   final String type;
@@ -62,37 +63,9 @@ class Character {
     required this.created,
   });
 
-  factory Character.fromJson(Map<String, dynamic> json) {
-    return Character(
-      id: json['id'],
-      name: json['name'],
-      status: json['status'],
-      species: json['species'],
-      type: json['type'],
-      gender: json['gender'],
-      origin: Origin.fromJson(json['origin']),
-      location: Location.fromJson(json['location']),
-      image: json['image'],
-      episode: List<String>.from(json['episode']),
-      url: json['url'],
-      created: DateTime.parse(json['created']),
-    );
-  }
+  factory Character.fromJson(Map<String, dynamic> json) => _$CharacterFromJson(json);
 
-  Map<String, dynamic> toJson() => {
-    'id': id,
-    'name': name,
-    'status': status,
-    'species': species,
-    'type': type,
-    'gender': gender,
-    'origin': origin.toJson(),
-    'location': location.toJson(),
-    'image': image,
-    'episode': episode,
-    'url': url,
-    'created': created.toIso8601String(),
-  };
+  Map<String, dynamic> toJson() => _$CharacterToJson(this);
 }
 
 class Origin {

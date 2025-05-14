@@ -41,12 +41,12 @@ Map<String, dynamic> _$CharacterToJson(Character instance) => <String, dynamic>{
 const _$CharacterStatusEnumMap = {
   CharacterStatus.alive: 'Alive',
   CharacterStatus.dead: 'Dead',
-  CharacterStatus.unknown: 'Unknown',
+  CharacterStatus.unknown: 'unknown',
 };
 
 const _$CharacterGenderEnumMap = {
   CharacterGender.male: 'Male',
   CharacterGender.female: 'Female',
   CharacterGender.genderless: 'Genderless',
-  CharacterGender.unknown: 'Unknown',
+  CharacterGender.unknown: 'unknown',
 };

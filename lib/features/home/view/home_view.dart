@@ -28,18 +28,20 @@ class HomeView extends StatelessWidget {
                         inspect(e);
                       }
                     },
-                    child: Text('Get characte'),
+                    child: Text('Get characters'),
                   ),
                 ),
                 SliverPadding(
-                  padding: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+                  padding: EdgeInsets.symmetric(
+                      vertical: 8,
+                      horizontal: 12),
                   sliver: SliverList.separated(
                     itemCount: state.characters.length,
                     itemBuilder: (BuildContext context, int index) {
                       final Character character = state.characters[index];
                       return Text(character.name);
                     },
-                    separatorBuilder: (BuildContext cotext, index) {
+                    separatorBuilder: (BuildContext context, index) {
                       return SizedBox(height: 8);
                     },
                   ),
