@@ -21,7 +21,7 @@ _configureNetworkDependencies() {
 
 _configureApiClients() {
   final dio = getIt.get<Dio>();
-  final String privateBaseUrl = AppConstants.rickAndMortyUrl;
+  final String privateBaseUrl = AppConstants.rickAndMortyApiUrl;
 
   getIt.registerLazySingleton<RickAndMortyApiClient>(
     () => RickAndMortyApiClient(dio, baseUrl: privateBaseUrl),

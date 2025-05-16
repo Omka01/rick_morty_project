@@ -1,3 +1,3 @@
-class AppConstants{
-static final String rickAndMortyUrl = "https://rickandmortyapi.com/api";
+class AppConstants {
+  static const String rickAndMortyApiUrl = "https://rickandmortyapi.com/api";
 }
